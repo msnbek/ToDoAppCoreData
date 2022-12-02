@@ -9,13 +9,20 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    var choosenTask = ""
+    var choosenSubtitle = ""
+    var choosenDescription = ""
+    var choosenId : UUID?
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var taskLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        descriptionLabel.text = choosenDescription
+        subtitleLabel.text = choosenSubtitle
+        taskLabel.text = choosenTask
     }
     
 
