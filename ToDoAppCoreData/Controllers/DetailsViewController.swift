@@ -9,6 +9,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var taskLabel: UILabel!
     override func viewDidLoad() {

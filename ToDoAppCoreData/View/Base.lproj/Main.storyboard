@@ -24,6 +24,9 @@
                                 <rect key="frame" x="319" y="52" width="55" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBs-or-WB8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Do Your Things" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D98-kO-Jyg">
                                 <rect key="frame" x="67" y="47" width="256" height="44"/>
@@ -49,8 +52,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="rn7-kQ-kx3"/>
                     <connections>
-                        <segue destination="1yg-fe-B49" kind="presentation" modalPresentationStyle="fullScreen" id="Z78-eT-tzG"/>
-                        <segue destination="n9g-IB-9No" kind="show" id="STz-ef-ebj"/>
+                        <outlet property="tableView" destination="R02-sn-C0k" id="Ll7-SO-VVb"/>
+                        <segue destination="1yg-fe-B49" kind="presentation" identifier="toPlanVC" modalPresentationStyle="fullScreen" id="Z78-eT-tzG"/>
+                        <segue destination="n9g-IB-9No" kind="show" identifier="toDetailsVC" id="STz-ef-ebj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -93,7 +97,7 @@
                         <viewLayoutGuide key="safeArea" id="hay-iB-c7I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hay-iB-c7I" firstAttribute="bottom" secondItem="C3v-hT-9HB" secondAttribute="bottom" constant="99" id="JOT-J2-hNr"/>
+                            <constraint firstItem="hay-iB-c7I" firstAttribute="bottom" secondItem="C3v-hT-9HB" secondAttribute="bottom" constant="76" id="JOT-J2-hNr"/>
                             <constraint firstItem="zB0-nO-0Hc" firstAttribute="leading" secondItem="NjQ-Wb-46I" secondAttribute="leadingMargin" id="N7Z-HT-q5H"/>
                             <constraint firstItem="C3v-hT-9HB" firstAttribute="top" secondItem="ImY-jv-yVF" secondAttribute="bottom" constant="43" id="TrM-aj-gT7"/>
                             <constraint firstItem="zB0-nO-0Hc" firstAttribute="centerX" secondItem="ImY-jv-yVF" secondAttribute="centerX" id="Uk5-iG-Izc"/>
@@ -106,6 +110,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2pk-DX-UMe"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="C3v-hT-9HB" id="Ix5-9m-YVD"/>
+                        <outlet property="subtitleLabel" destination="ImY-jv-yVF" id="ubb-mz-2t3"/>
+                        <outlet property="taskLabel" destination="zB0-nO-0Hc" id="bJ8-7X-q9x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIt-RX-JEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,6 +166,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Create"/>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="1yg-fe-B49" eventType="touchUpInside" id="Tex-Jw-nmR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRx-BT-DyC">
                                 <rect key="frame" x="16" y="47" width="77" height="35"/>
@@ -165,6 +177,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="&lt; Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="1yg-fe-B49" eventType="touchUpInside" id="u0H-e1-i6s"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's accomplish something today!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prd-VE-R8v">
                                 <rect key="frame" x="47" y="125" width="297" height="37"/>
@@ -204,7 +219,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="PfU-JT-2QE"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="j6b-SG-N5p"/>
+                        <outlet property="descriptionTextField" destination="wtV-qd-diF" id="gpA-QS-BwC"/>
+                        <outlet property="subtitleTextField" destination="ate-sZ-gXM" id="6lZ-ag-M0w"/>
+                        <outlet property="taskTextField" destination="Uzz-qH-R6V" id="U1F-HB-f4Q"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toTableView" id="j6b-SG-N5p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZr-C6-51c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

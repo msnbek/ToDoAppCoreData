@@ -14,6 +14,8 @@
 		EDFED60C293A180C001929AD /* ToDoAppCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDFED60A293A180C001929AD /* ToDoAppCoreData.xcdatamodeld */; };
 		EDFED60E293A180D001929AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDFED60D293A180D001929AD /* Assets.xcassets */; };
 		EDFED611293A180D001929AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFED60F293A180D001929AD /* LaunchScreen.storyboard */; };
+		EDFED619293A181A001929AD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFED618293A181A001929AD /* DetailsViewController.swift */; };
+		EDFED61B293A1827001929AD /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFED61A293A1827001929AD /* AddPlanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EDFED60D293A180D001929AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDFED610293A180D001929AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDFED612293A180D001929AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDFED618293A181A001929AD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		EDFED61A293A1827001929AD /* AddPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,34 @@
 		EDFED600293A180C001929AD /* ToDoAppCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				EDFED601293A180C001929AD /* AppDelegate.swift */,
-				EDFED603293A180C001929AD /* SceneDelegate.swift */,
-				EDFED605293A180C001929AD /* ViewController.swift */,
-				EDFED607293A180C001929AD /* Main.storyboard */,
-				EDFED60D293A180D001929AD /* Assets.xcassets */,
-				EDFED60F293A180D001929AD /* LaunchScreen.storyboard */,
+				EDFED61C293A19BF001929AD /* Controllers */,
+				EDFED61D293A19D0001929AD /* View */,
 				EDFED612293A180D001929AD /* Info.plist */,
 				EDFED60A293A180C001929AD /* ToDoAppCoreData.xcdatamodeld */,
 			);
 			path = ToDoAppCoreData;
+			sourceTree = "<group>";
+		};
+		EDFED61C293A19BF001929AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDFED605293A180C001929AD /* ViewController.swift */,
+				EDFED61A293A1827001929AD /* AddPlanViewController.swift */,
+				EDFED618293A181A001929AD /* DetailsViewController.swift */,
+				EDFED603293A180C001929AD /* SceneDelegate.swift */,
+				EDFED601293A180C001929AD /* AppDelegate.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EDFED61D293A19D0001929AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDFED607293A180C001929AD /* Main.storyboard */,
+				EDFED60D293A180D001929AD /* Assets.xcassets */,
+				EDFED60F293A180D001929AD /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +167,8 @@
 				EDFED602293A180C001929AD /* AppDelegate.swift in Sources */,
 				EDFED60C293A180C001929AD /* ToDoAppCoreData.xcdatamodeld in Sources */,
 				EDFED604293A180C001929AD /* SceneDelegate.swift in Sources */,
+				EDFED619293A181A001929AD /* DetailsViewController.swift in Sources */,
+				EDFED61B293A1827001929AD /* AddPlanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
